@@ -1,1 +1,7 @@
-baixe => npm install => npm run storybook
+baixar => npm install 
+
+# rodar storybook
+npm run storybook
+
+# rodar projeto react
+npm run dev

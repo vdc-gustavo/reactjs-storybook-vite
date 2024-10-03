@@ -1,6 +1,9 @@
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
-  stories: ["../src/**/*.mdx", "../src/**/**/*.stories.@(js|jsx|mjs)"],
+  stories: [
+    "../stories/**/*.mdx", 
+    "../src/**/*.mdx", 
+    "../src/**/**/*.stories.@(js|jsx|mjs)"],
 
   addons: [
     "@storybook/addon-onboarding",
@@ -8,6 +11,7 @@ const config = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    '@storybook/addon-themes'
   ],
 
   framework: {
@@ -15,10 +19,14 @@ const config = {
     options: {},
   },
 
+  core: {
+    builder: '@storybook/builder-vite',
+  },
+
   docs: {},
 
   typescript: {
     reactDocgen: "react-docgen-typescript"
-  }
+  },
 };
 export default config;
